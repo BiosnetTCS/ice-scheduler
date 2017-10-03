@@ -23,23 +23,18 @@ public class CronTramitesFlagBean {
 	
 	public void invocaServicioTramitesFlag(){
 		try {
-			logger.info("Inicio de invocacion al servicio de tramites flag");
+			logger.info("Inicio de invocacion a url {} ", urlServicioTramitesFlags1 );
 			
-			HttpUtil.sendPost(urlServicioTramitesFlags1, "");
+			String respuesta = HttpUtil.sendPost(urlServicioTramitesFlags1, "");
 			
-			HttpUtil.sendPost(urlServicioTramitesFlags2, "");
+			//HttpUtil.sendPost(urlServicioTramitesFlags2, "");
 			
-			HttpUtil.sendPost(urlServicioTramitesFlags3, "");
+			//HttpUtil.sendPost(urlServicioTramitesFlags3, "");
+			
+			logger.info("Fin de invocacion a url {}, respuesta {} ", urlServicioTramitesFlags1, respuesta);
 			
 		} catch (Exception e) {
 			logger.error("Error en el servicio de tramites flag", e);
 		}
-	}
-	
-	/*
-	public void printAnotherMessage2(){
-		logger.info("Otro metodo...");
-	}
-	*/
-	
+	}	
 }

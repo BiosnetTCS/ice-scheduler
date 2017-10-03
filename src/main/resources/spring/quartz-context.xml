@@ -19,7 +19,6 @@
 		<property name="jobClass" value="com.biosnettcs.quartz.ScheduledJob" />
 		<property name="jobDataMap">
 			<map>
-				<entry key="anotherBean" value-ref="anotherBean" />
 				<entry key="cronTramitesFlagBean" value-ref="cronTramitesFlagBean" />
 			</map>
 		</property>

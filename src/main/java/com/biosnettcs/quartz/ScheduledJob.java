@@ -8,21 +8,14 @@ import com.biosnettcs.scheduling.AnotherBean;
 import com.biosnettcs.scheduling.CronTramitesFlagBean;
 
 public class ScheduledJob extends QuartzJobBean{
-
-	
-	private AnotherBean anotherBean;
 	
 	private CronTramitesFlagBean cronTramitesFlagBean;
 	
 	
 	@Override
 	protected void executeInternal(JobExecutionContext arg0) throws JobExecutionException {
-		anotherBean.printAnotherMessage();
-		cronTramitesFlagBean.invocaServicioTramitesFlag();
-	}
 
-	public void setAnotherBean(AnotherBean anotherBean) {
-		this.anotherBean = anotherBean;
+		cronTramitesFlagBean.invocaServicioTramitesFlag();
 	}
 
 	public void setCronTramitesFlagBean(CronTramitesFlagBean cronTramitesFlagBean) {
