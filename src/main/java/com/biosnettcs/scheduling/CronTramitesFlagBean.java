@@ -25,7 +25,9 @@ public class CronTramitesFlagBean {
 		try {
 			logger.info("Inicio de invocacion a url {} ", urlServicioTramitesFlags1 );
 			
-			String respuesta = HttpUtil.sendPost(urlServicioTramitesFlags1, "");
+			String respuesta = null;
+			
+			respuesta = HttpUtil.sendPost(urlServicioTramitesFlags1, "");
 			
 			//HttpUtil.sendPost(urlServicioTramitesFlags2, "");
 			

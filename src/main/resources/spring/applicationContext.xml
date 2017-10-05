@@ -15,13 +15,9 @@
     <bean id="propertyConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
         <property name="locations">
             <list>
-                 <value>classpath:main.properties</value>
+                 <value>file:///${config.path}/cotizadores/mvc/scheduler.properties</value>
             </list>
         </property>
-    </bean>
-    
-    
-	<!-- JNDI Resources: -->
-	<jee:jndi-lookup id="dataSource" jndi-name="${target.jndi}"/>
+	</bean>
     
 </beans>
